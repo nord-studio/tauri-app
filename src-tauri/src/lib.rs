@@ -2,9 +2,9 @@ use tauri_plugin_updater::UpdaterExt;
 
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 #[tauri::command]
-fn greet(name: &str) -> String {
+fn greet(_name: &str) -> String {
     // Intentionally using {{name}} to show that it's not replaced
-    format!("Hello, {}! You've been greeted from Rust!", name)
+    format!("Hello, {{name}}! You've been greeted from Rust!")
 }
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
