@@ -3,6 +3,7 @@ import { invoke } from "@tauri-apps/api/core";
 import { check } from "@tauri-apps/plugin-updater";
 import { ask, message } from "@tauri-apps/plugin-dialog";
 import { app } from "@tauri-apps/api";
+import { relaunch } from "@tauri-apps/plugin-process";
 import "./App.css";
 
 function App() {
@@ -43,7 +44,8 @@ function App() {
 
 			if (yes) {
 				await update.downloadAndInstall();
-				await app;
+				setLoading(false);
+				await relaunch();
 			}
 		}
 

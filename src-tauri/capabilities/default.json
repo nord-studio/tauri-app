@@ -6,13 +6,15 @@
     "main"
   ],
   "permissions": [
-    "core:default",
-    "opener:default",
-    "updater:allow-check",
-    "updater:allow-download-and-install",
-    "updater:allow-download",
-    "updater:allow-install",
-    "updater:default",
-    "dialog:default"
+		"core:default",
+		"opener:default",
+		"updater:allow-check",
+		"updater:allow-download-and-install",
+		"updater:allow-download",
+		"updater:allow-install",
+		"updater:default",
+		"dialog:default",
+		"process:default",
+		"process:allow-restart"
   ]
 }
