@@ -35,7 +35,7 @@ function App() {
 			const yes = await ask(
 				"An update is available. Do you want to install it?",
 				{
-					title: "Update Available",
+					title: "An update is available",
 					kind: "info",
 					okLabel: "Update",
 					cancelLabel: "Dismiss",
