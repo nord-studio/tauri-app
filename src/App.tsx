@@ -43,9 +43,20 @@ function App() {
 			);
 
 			if (yes) {
-				await update.downloadAndInstall();
-				setLoading(false);
-				await relaunch();
+				await update
+					.downloadAndInstall()
+					.then(async () => {
+						await relaunch();
+					})
+					.catch((e) => {
+						console.error(e);
+						setLoading(false);
+						message("Failed to install the update", {
+							title: "Error",
+							kind: "error",
+							okLabel: "OK",
+						});
+					});
 			}
 		}
 
