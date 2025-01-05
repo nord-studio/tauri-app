@@ -38,7 +38,7 @@ function App() {
 					title: "Update Available",
 					kind: "info",
 					okLabel: "Update",
-					cancelLabel: "Cancel",
+					cancelLabel: "Dismiss",
 				}
 			);
 
